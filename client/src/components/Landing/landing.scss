@@ -1,0 +1,125 @@
+$primary_heading: #fff;
+$secodary_heading:rgba(255,255,255,0.8);
+
+
+@mixin button(){
+    background-color: #fff;
+}
+
+
+
+
+
+.landing{
+    width: 90%;
+    margin: auto;
+
+}
+
+.landing_outer{
+    width: 100%;
+    height: 100vh;
+    background: #C04848;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C04848, #480048);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C04848, #480048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    overflow: hidden;
+
+}
+
+.navbar{
+    height: 60px;
+}
+
+.navbar_inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar_ul li{
+    margin-left:40px;
+    color: $primary_heading;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+
+.logo_img{
+    display: flex;
+    width: 130px;
+}
+
+.navbar_left{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.login_button{
+    border: 2px solid #fff;
+    padding: 10px 40px;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-left: 30px !important;
+}
+
+.connect_button{
+    background-color: #fff;
+    padding: 10px 40px;
+    border-radius: 50px;
+    color: #000 !important;
+    margin-left: 20px !important;
+    font-weight: 500;
+
+}
+
+.content{
+    display: flex;
+    justify-content: space-between
+}
+
+.main_content{
+margin-top: 50px;
+width: 50%;
+}
+
+.coin{
+    width:100%;
+    margin-left: 150px;
+}
+
+.main_content {
+h2{
+    font-size: 42px;
+    color: $primary_heading;
+    font-weight: 500;
+}
+
+p{
+    font-size: 22px;
+    color: $secodary_heading;
+}
+
+.main_button{
+    background: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 70px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+
+}
+
+
+}
+
+.image_landing{
+width: 50%;
+}
