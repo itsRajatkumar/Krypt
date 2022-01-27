@@ -35,7 +35,7 @@ function registerUser(req,res){
         }
         
         // creating record in databse with recived input
-        const user = new userModel(req.body);
+        const user = new userModel(password, email, firstname, lastname, address, dob);
 
         // generating incrypted password
         bcrypt.genSalt(saltRounds, async function (err, salt) {

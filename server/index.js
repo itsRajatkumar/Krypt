@@ -1,16 +1,17 @@
 const express = require('express');
+const dotenv = require('dotenv')
 const bodyParser = require('body-parser');
 const router = require('./routes')
-const db = require('./db')
+const db = require('./DB/db')
 const app = express()
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router);
 
+dotenv.config();
 
-
-const port = process.env.PORT || 8080;
+const port = process.env.PORTSERVER;
 
 // connecting to the database
 db()
