@@ -17,6 +17,6 @@ const port = process.env.PORTSERVER;
 db()
 
 // listening the server on port
-app.listen(port, ()=>{
-    console.log("running")
+app.listen(8080, ()=>{
+    console.log("running", port)
 })

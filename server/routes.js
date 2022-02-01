@@ -3,6 +3,7 @@ const app = express()
 const {registerUser, loginUser, updatepassword} = require('./routes/SignupLogin')   //Auth functions
 const {uploadProfile, getProfie, removeProfile, updateProfile} = require('./routes/uploadImage')    //profile img functions
 const {upload} = require('./utils/multer')    //multer for uploading image
+var cookieParser = require('cookie-parser');
 
 
 // serving files
@@ -22,7 +23,7 @@ app.get('/updatepassword', (req, res)=>{
   res.sendFile(__dirname + '/htmlf/pass.html')
 })
 
-
+app.use(cookieParser());
 
 // User Authentication request handling
 

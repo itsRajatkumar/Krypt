@@ -1,5 +1,6 @@
 // requiring importent modules
 var mongoose = require('mongoose');
+const bcrypt = require("bcrypt");
 var Schema = mongoose.Schema;
 
 
@@ -57,6 +58,16 @@ var SomeModelSchema = new Schema({
 
 
 });
+
+
+// SomeModelSchema.pre('save', async function(next){
+//   if(this.isModified('password')){
+//     let salt = bcrypt.genSalt(saltRounds)
+//     this.password = bcrypt.hash(password, salt)
+//     }
+//     next();  
+// })
   
 // exporing module for use to upload details
 module.exports = mongoose.model('User', SomeModelSchema );
+
